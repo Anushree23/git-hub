@@ -1,1 +1,623 @@
-heyy
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ ls
+README.md
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git commit
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git "README.md"
+git: 'README.md' is not a git command. See 'git --help'.
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ code README.md
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git log
+fatal: your current branch 'master' does not have any commits yet
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ code README.md
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ ls
+instruction.txt  README.md
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git commit
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+        instruction.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git log
+fatal: your current branch 'master' does not have any commits yet
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+        instruction.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git add README.md
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        instruction.txt
+
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git commit -m "Modify README.md file by adding H4 tag"
+[master (root-commit) 224bcb2] Modify README.md file by adding H4 tag
+ 1 file changed, 4 insertions(+)
+ create mode 100644 README.md
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git add instruction.txt
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   instruction.txt
+
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git commit -m "Revert changes to README.MD"
+[master 9c0acaf] Revert changes to README.MD
+ 1 file changed, 1 insertion(+)
+ create mode 100644 instruction.txt
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git log
+commit 9c0acafcd8b55a0befa6be3076a088d4d458d2cf (HEAD -> master)
+Author: Anushree Agrawal <anushree.agrawal@zensar.com>
+Date:   Tue Jul 14 14:08:10 2020 +0530
+
+    Revert changes to README.MD
+
+commit 224bcb22f1244176f52bde470ffda9c24ad97970
+Author: Anushree Agrawal <anushree.agrawal@zensar.com>
+Date:   Tue Jul 14 13:56:21 2020 +0530
+
+    Modify README.md file by adding H4 tag
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git log --one line
+fatal: ambiguous argument 'line': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git log --
+commit 9c0acafcd8b55a0befa6be3076a088d4d458d2cf (HEAD -> master)
+Author: Anushree Agrawal <anushree.agrawal@zensar.com>
+Date:   Tue Jul 14 14:08:10 2020 +0530
+
+    Revert changes to README.MD
+
+commit 224bcb22f1244176f52bde470ffda9c24ad97970
+Author: Anushree Agrawal <anushree.agrawal@zensar.com>
+Date:   Tue Jul 14 13:56:21 2020 +0530
+
+    Modify README.md file by adding H4 tag
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ code "README.md"
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ code index.html
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ ls
+index.html  instruction.txt  README.md
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git add index.html
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index.html
+
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git commit
+hint: Waiting for your editor to close the file...
+Aborting commit due to empty commit message.
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git commit -m "add index.html file"
+[master 40ce608] add index.html file
+ 1 file changed, 8 insertions(+)
+ create mode 100644 index.html
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git add *.*
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git remote add origin https://github.com/Anushree23/git-hub.git
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git push -u origin master
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (9/9), 905 bytes | 226.00 KiB/s, done.
+Total 9 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/Anushree23/git-hub.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git pull https://github.com/Anushree23/git-hub.git
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 733 bytes | 4.00 KiB/s, done.
+From https://github.com/Anushree23/git-hub
+ * branch            HEAD       -> FETCH_HEAD
+Updating 40ce608..d8ad859
+Fast-forward
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ code README.md
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git commit -m"Change in README.md add h4 tag"
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git push -u origin master
+Everything up-to-date
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ code README.md
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git commit -m"Change in README.md add h5 tag"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git push -u origin master
+Everything up-to-date
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ code README.md
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git commit -m"Change in README.md add h4 tag"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git push -u origin master
+Everything up-to-date
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ code README.md
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git push -u origin master
+Everything up-to-date
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git commit -m"Change in README.md file"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git remote add origin https://github.com/Anushree23/git-hub.git
+fatal: remote origin already exists.
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git commit -m"Change in README.md file"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git push -u origin master
+Everything up-to-date
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git remote add origin https://github.com/Anushree23/git-hub.git
+fatal: remote origin already exists.
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git add README.md
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git commit -m"Change in README.md file"                   [master 37d1761] Change in README.md file
+ 1 file changed, 1 insertion(+)
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git push -u origin master                                 Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 375 bytes | 375.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Anushree23/git-hub.git
+   d8ad859..37d1761  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ ls
+index.html  instruction.txt  README.md
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git log --oneline
+37d1761 (HEAD -> master, origin/master) Change in README.md file
+d8ad859 Update README.md
+40ce608 add index.html file
+9c0acaf Revert changes to README.MD
+224bcb2 Modify README.md file by adding H4 tag
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git diff d8ad 40ce
+diff --git a/README.md b/README.md
+index baf03a4..7f0d75c 100644
+--- a/README.md
++++ b/README.md
+@@ -1,5 +1,4 @@
+ ## This is read me file
+ This file contains instructions to open the project
+-this is change
+ THE word **README** is in bold
+
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git checkout -b feature
+Switched to a new branch 'feature'
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (feature)
+$ ls
+index.html  instruction.txt  README.md
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (feature)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git branch
+  feature
+* master
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git checkout -b feature
+fatal: A branch named 'feature' already exists.
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git checkout feature
+Switched to branch 'feature'
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (feature)
+$ git branch
+* feature
+  master
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (feature)
+$ git checkout -b test
+Switched to a new branch 'test'
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (test)
+$ git branch
+  feature
+  master
+* test
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (test)
+$ ls
+index.html  instruction.txt  README.md
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (test)
+$ git diff test master
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (test)
+$ code index.html
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (test)
+$ git status
+On branch test
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (test)
+$ git add .
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (test)
+$ git commit -m "add new table tag in index.html test"
+[test de91307] add new table tag in index.html test
+ 1 file changed, 11 insertions(+)
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (test)
+$ git status
+On branch test
+nothing to commit, working tree clean
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (test)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git merge test
+Updating 37d1761..de91307
+Fast-forward
+ index.html | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ code index.html
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git branch
+  feature
+* master
+  test
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (master)
+$ git checkout feature
+Switched to branch 'feature'
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (feature)
+$ ls
+index.html  instruction.txt  README.md
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (feature)
+$ code index.html
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (feature)
+$ code index.css
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (feature)
+$ add .
+bash: add: command not found
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (feature)
+$ git commit -m "add new css file with tag index"
+On branch feature
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.css
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+anushree@DESKTOP-EK962EM MINGW64 /d/14 july GIT (feature)
+$ git checkout master
+error: Your local changes to the following files would be overwritten by checkout:
+        index.html
+Please commit your changes or stash them before you switch branches.
+Aborting
+
